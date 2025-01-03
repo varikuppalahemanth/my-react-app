@@ -10,6 +10,7 @@ services:
       - "3000:3000"  # Map port 3000 of the container to port 3000 on the host
     volumes:
       - .:/app  # Mount the current directory to /app inside the container
+    command: ["npm", "start"]
   # Needed for file watching inside Docker (optional)
 
   # If you have a backend API, you could add a service for it as well:
