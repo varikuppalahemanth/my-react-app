@@ -3,14 +3,10 @@ version: '3.8'
 services:
   # React app service
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: hemanth123456789/my-react-app:latest
     ports:
       - "3000:3000"  # Map port 3000 of the container to port 3000 on the host
-    volumes:
-      - .:/app  # Mount the current directory to /app inside the container
-    command: sh "docker run -d -p 3000:3000 hemanth123456789/my-react-app:latest"
+  # Mount the current directory to /app inside the container
   # Needed for file watching inside Docker (optional)
 
   # If you have a backend API, you could add a service for it as well:
