@@ -11,7 +11,7 @@ pipeline{
         stage("build"){
             steps{
                 echo "building the image"
-                sh "docker buildx -t my-react-app ."
+                sh "docker build -t my-react-app ."
             }
             
         }
