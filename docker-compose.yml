@@ -5,7 +5,8 @@ services:
   app:
     image: hemanth123456789/my-react-app:latest
     ports:
-      - "3000:3000"  # Map port 3000 of the container to port 3000 on the host
+      - "3000:3000" 
+    command: npm start # Map port 3000 of the container to port 3000 on the host
   # Mount the current directory to /app inside the container
   # Needed for file watching inside Docker (optional)
 
